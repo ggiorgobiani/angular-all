@@ -1,0 +1,17 @@
+
+<h2>our books</h2>
+
+<button (click)="getAllBooks()">get all books</button> 
+<a routerLink="/books/create">create a new book</a>
+
+<ul>
+    <li *ngFor="let book of books">
+        <a [routerLink]="['/books',book.id]">
+            {{ book.title}}
+        </a>
+    </li>
+</ul>
+
+
+
+<!-- {{ books | json }}   c'est pour afficher un tableau en mode json -->
